@@ -122,10 +122,12 @@
 @media (max-width: 768px) {
 
   .greeting-text {
+    margin-top: 40px;
     font-size: 2rem;
   }
 
   .birthday-image {
+    margin-top: -100px;
     max-width: 90%;
     margin-bottom: 20px;
   }
@@ -136,7 +138,7 @@
 
   .developer-credit p {
     font-size: 1rem;
-    margin-top: -50px;
+    margin-top: -150px;
   }
 }
 
