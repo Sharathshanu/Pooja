@@ -120,29 +120,6 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .greeting-text {
-    font-size: 2.5rem;
-  }
-
-  .birthday-image {
-    max-width: 80%;
-    max-height: 50%;
-  }
-
-  .wish-text {
-    font-size: 1.2rem;
-  }
-
-  .developer-credit p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-   .birthday-greeting {
-    margin-top: 40px;
-    /* border: red 2px solid; */
-  }
 
   .greeting-text {
     font-size: 2rem;
@@ -155,13 +132,11 @@
 
   .wish-text {
     font-size: 1.2rem;
-    /* border: red 2px solid; */
-
   }
 
   .developer-credit p {
     font-size: 1rem;
     margin-top: -50px;
-    /* border: red 2px solid; */
   }
 }
+

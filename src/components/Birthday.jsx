@@ -45,7 +45,7 @@ const Birthday = () => {
 
       {/* Developer credit */}
       <div className="developer-credit">
-        <p>Developed by Sharath Shanu</p>
+        <p>By Shanu</p>
       </div>
     </div>
   );
