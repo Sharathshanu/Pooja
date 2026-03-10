@@ -37,34 +37,33 @@ const Birthday = () => {
     // Confetti cannon state
     let confetti = [];
     const confettiColors = [
-      '#ffb3c6', '#ff85a1', '#ffc8dd', '#ff5c8a',
-      '#ffcfd2', '#f4acb7', '#ffb347', '#ff6eb4',
-      '#c77dff', '#e0aaff', '#ffd6ff', '#ff9ebb',
+      '#ffb3c6','#ff85a1','#ffc8dd','#ff5c8a',
+      '#ffcfd2','#f4acb7','#ffb347','#ff6eb4',
+      '#c77dff','#e0aaff','#ffd6ff','#ff9ebb',
     ];
     const shapes = ['rect', 'ribbon', 'circle', 'rect', 'ribbon'];
 
     const spawnCannon = (fromLeft) => {
-      const cx = canvas.width / 2;
-      const cy = canvas.height / 2;
-      const imageHalfW = Math.min(170, canvas.width * 0.19);
-      const ox = fromLeft ? cx - imageHalfW - 10 : cx + imageHalfW + 10;
-      const oy = cy;
+      // Fire from top-left or top-right corner of the entire screen
+      const ox = fromLeft ? 0 : canvas.width;
+      const oy = 0;
+
       const count = 120;
       for (let i = 0; i < count; i++) {
         const baseAngle = fromLeft
-          ? -(Math.PI * 0.75 + Math.random() * Math.PI * 0.5)
-          : -(Math.PI * 0.00 - Math.random() * Math.PI * 0.5);
-        const speed = Math.random() * 13 + 5;
+          ? (Math.random() * Math.PI * 0.45)          // top-left: fans down-right
+          : (Math.PI - Math.random() * Math.PI * 0.45); // top-right: fans down-left
+        const speed = Math.random() * 14 + 6;
         confetti.push({
           x: ox, y: oy,
           vx: Math.cos(baseAngle) * speed,
-          vy: Math.sin(baseAngle) * speed - 2,
+          vy: Math.sin(baseAngle) * speed,
           alpha: 1,
-          decay: Math.random() * 0.012 + 0.007,
+          decay: Math.random() * 0.009 + 0.005,
           w: Math.random() * 10 + 5,
           h: Math.random() * 5 + 3,
           color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
-          gravity: 0.22,
+          gravity: 0.20,
           rotation: Math.random() * Math.PI * 2,
           rotSpeed: (Math.random() - 0.5) * 0.2,
           shape: shapes[Math.floor(Math.random() * shapes.length)],
@@ -483,7 +482,7 @@ const Birthday = () => {
             </div>
 
             <h1 className="g-title">Happy Birthday</h1>
-            <p className="g-name">Pooja</p>
+            <p className="g-name">Mami</p>
 
             <div className="g-divider">
               <div className="g-div-line" />
@@ -519,6 +518,11 @@ const Birthday = () => {
             <div className="g-badge">✦ Birthday Girl ✦</div>
           </div>
 
+        </div>
+
+        <div className="g-credit">
+          <span className="g-credit-by">crafted with love by</span>
+          <span className="g-credit-name">Shanu</span>
         </div>
       </div>
     </>
