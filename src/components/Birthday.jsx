@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import birthdayImage from './../assets/ii.jpg';
+import birthdayImage from './../assets/ii.jpeg';
 
 const Birthday = () => {
   const canvasRef = useRef(null);
@@ -37,9 +37,9 @@ const Birthday = () => {
     // Confetti cannon state
     let confetti = [];
     const confettiColors = [
-      '#ffb3c6','#ff85a1','#ffc8dd','#ff5c8a',
-      '#ffcfd2','#f4acb7','#ffb347','#ff6eb4',
-      '#c77dff','#e0aaff','#ffd6ff','#ff9ebb',
+      '#ffb3c6', '#ff85a1', '#ffc8dd', '#ff5c8a',
+      '#ffcfd2', '#f4acb7', '#ffb347', '#ff6eb4',
+      '#c77dff', '#e0aaff', '#ffd6ff', '#ff9ebb',
     ];
     const shapes = ['rect', 'ribbon', 'circle', 'rect', 'ribbon'];
 
@@ -483,7 +483,7 @@ const Birthday = () => {
             </div>
 
             <h1 className="g-title">Happy Birthday</h1>
-            <p className="g-name">Mami</p>
+            <p className="g-name">Pooja</p>
 
             <div className="g-divider">
               <div className="g-div-line" />
